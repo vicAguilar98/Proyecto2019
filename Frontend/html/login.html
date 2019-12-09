@@ -102,20 +102,6 @@ margin-left: 4px;
 }
   </style>
   
-  <!-- <Script src="../js/login.js"></Script> -->
-  <script>
-  function Validelogin(){
-    var user = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-
-    if(user===null && password===null ||user==="" || password===""){
-        alert("Ingrese usuario o password, campo(s) vacio(s)");
-    }else{
-        alert("OK 200");
-    }
-}
-  </script>
-
   </head>
   <body>
     <div class="container">
@@ -148,7 +134,7 @@ margin-left: 4px;
                 <input type="checkbox">Recordar
               </div>
               <div class="form-group">
-                <input type="button" onclick="Validelogin()" value="Iniciar" class="btn float-right login_btn">
+                <button onclick="Validelogin()" class="btn float-right login_btn">Iniciar</button>
               </div>
             </form>
           </div>
@@ -163,6 +149,25 @@ margin-left: 4px;
       </div>
     </div>
     <!-- Optional JavaScript -->
+    <script>
+      
+      function Validelogin(){
+        var user = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST','http://127.0.0.1:3800/api/login');
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send("username="+user+"&password="+password);
+        xhr.onload = function(){
+                if(xhr.status != 200){
+                  let message = JSON.parse(xhr.response);
+                  alert(xhr.status);
+                }else{
+                  let message = JSON.parse(xhr.response);                                                    
+                }
+            };
+      }    
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

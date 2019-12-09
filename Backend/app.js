@@ -6,8 +6,8 @@ const http = require('http');
 const fs = require('fs');
 const app = express();
 
-//eval(fs.readFileSync('../Frontend/js/login.js'));
-let data = (fs.readFileSync('../Frontend/html/login.html'));
+
+const PageLogin = (fs.readFileSync('../Frontend/html/login.html'));
 
 //cargar rutas
 const user_routes = require('./Routes/user');
@@ -17,11 +17,12 @@ const typelist_routes = require('./Routes/typelist');
 //middlewares
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '../Frontend'));
 
 //cors
 
 //rutas
-app.get('/', (req,res) =>{ res.write(data)})
+app.get('/', (req,res) =>{ res.write(PageLogin)})
 app.use('/api', user_routes);
 app.use('/api', campania_routes);
 app.use('/api', typelist_routes);
