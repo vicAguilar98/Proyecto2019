@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+            .form-inline {
+               display: inline-block;
+           }
+           .navbar-header.col {
+               padding: 0 !important;
+           }	
+           .navbar {		
+               background: #fff;
+               padding-left: 16px;
+               padding-right: 16px;
+               border-bottom: 1px solid #d6d6d6;
+               box-shadow: 0 0 4px rgba(0,0,0,.1);
+           }
+           .nav-link img {
+               border-radius: 50%;
+               width: 36px;
+               height: 36px;
+               margin: -8px 0;
+               float: left;
+               margin-right: 10px;
+           }
+           .navbar .navbar-brand {
+               color: #555;
+               padding-left: 0;
+               padding-right: 50px;
+               font-family: 'Merienda One', sans-serif;
+           }
+           .navbar .navbar-brand i {
+               font-size: 20px;
+               margin-right: 5px;
+           }
+           .search-box {
+               position: relative;
+           }	
+           .search-box input {
+               box-shadow: none;
+               padding-right: 35px;
+               border-radius: 3px !important;
+               float:right;
+           }
+           .search-box .input-group-addon {
+               min-width: 35px;
+               border: none;
+               background: transparent;
+               position: absolute;
+               right: 0;
+               z-index: 9;
+               padding: 7px;
+               height: 100%;
+           }
+           .search-box i {
+               color: #a0a5b1;
+               font-size: 19px;
+           }
+           .navbar .nav-item i {
+               font-size: 18px;
+           }
+           .navbar .dropdown-item i {
+               font-size: 16px;
+               min-width: 22px;
+           }
+           .navbar .nav-item.open > a {
+               background: none !important;
+           }
+           .navbar .dropdown-menu {
+               border-radius: 1px;
+               border-color: #e5e5e5;
+               box-shadow: 0 2px 8px rgba(0,0,0,.05);
+           }
+           .progress{
+             background: rgb(218, 213, 213);
+           }
+           .progress-bar progress-bar-danger{
+            background: #f44336;
+           }
+           .navbar .dropdown-menu li a {
+               color: #777;
+               padding: 8px 20px;
+               line-height: normal;
+           }
+           .navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:active {
+               color: #333;
+           }	
+           .navbar .dropdown-item .material-icons {
+               font-size: 21px;
+               line-height: 16px;
+               vertical-align: middle;
+               margin-top: -2px;
+           }
+           .navbar .badge {
+               background: #f44336;
+               font-size: 11px;
+               border-radius: 20px;
+               position: absolute;
+               min-width: 10px;
+               padding: 4px 6px 0;
+               min-height: 18px;
+               top: 5px;
+           }
+           .navbar ul.nav li a.notifications, .navbar ul.nav li a.messages {
+               position: relative;
+               margin-right: 10px;
+           }
+           .navbar ul.nav li a.messages {
+               margin-right: 20px;
+           }
+           .navbar a.notifications .badge {
+               margin-left: -8px;
+           }
+           .navbar a.messages .badge {
+               margin-left: -4px;
+           }	
+           .navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
+               background: transparent !important;
+           }
+           @media (min-width: 1200px){
+               .form-inline .input-group {
+                   width: 300px;
+                   margin-left: 30px;
+               }
+           }
+           @media (max-width: 1199px){
+               .form-inline {
+                   display: block;
+                   margin-bottom: 10px;
+               }
+               .input-group {
+                   width: 100%;
+               }
+           }
+       </style>
+       
+       
+
+</head>
+  <body>
+        <!-- <div class="jumbotron">
+              </div> -->
+            
+              <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="#">Phishing</a>
+                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                  aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Campañas.html">Campaña</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="" href="listaDistribuciones.html">Listas de Distribución</a>
+                    </li>
+            
+                    <li class="nav-item">
+                      <a class="nav-link" href="templates.html">Templates</a>
+                    </li>
+                    
+                  </ul>
+                       
+                </div>
+              </nav>
+
+              <br><br><p></p>
+
+              <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+                    <div class="col-md-6 px-0">
+                      <h1 class="display-4 font-italic">Bienvenidos Anti-spam</h1>
+                      <p class="lead my-3" > Esta página tiene como objetivo concientizar a las personas sobre los riegos del Phishing y enseñarlos a realizar una pequeña campaña.</p>
+                      <p class="lead mb-0"><a href="http://bootsnipp.com/" class="text-white font-weight-bold" data-toggle="modal" data-target="#modalINIT">Continua leyendo...</a></p>
+                    </div>
+                  </div>
+          
+                <main role="main" class="container">
+                  <div class="row">
+                    <div class="col-md-8 blog-main">
+                      <h3 class="pb-4 mb-4 font-italic border-bottom">
+                        Noticias recientes
+                      </h3>
+                
+                      <div class="blog-post">
+                        <h2 class="blog-post-title">Usuarios de Netflix, víctimas de Phishing</h2>
+                        <p class="blog-post-meta">Octubre 1, 2019 de <a href="#">RedactionComputing</a></p>
+                
+                        <p>Se extiende una campaña de phishing para robar datos bancarios a usuarios de Netflix.                             
+                                
+                                El laboratorio anti-malware de Panda Security, PandaLabs, ha detectado una oleada de ciberataques en forma de phishing, en la que los ciberdelincuentes suplantan la identidad de Netflix para robar datos bancarios y personales.</p>
+                        <hr>
+                        <p>Por medio del envío masivo de un email con el asunto “Actualiza tu información de pago”, el correo informa al usuario de que se ha producido un error en el abono de la última cuota mensual con Netflix, por lo que debe acceder a su cuenta para subsanar el problema.
+
+                            Sin embargo, cuando la víctima del engaño pincha en el enlace, llega a una web ajena a Netflix, pero sí muy similar, en la que hay un formulario donde debe introducir “de nuevo” el número de su tarjeta de crédito, la fecha de caducidad y el código de seguridad (CVV)..</p>
+                      </div><!-- /.blog-post -->
+                
+                      <div class="blog-post">
+                        <h2 class="blog-post-title">Another blog post</h2>
+                        <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
+                
+                        <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                        <blockquote>
+                          <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </blockquote>
+                        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                      </div><!-- /.blog-post -->
+                
+                      <div class="blog-post">
+                        <h2 class="blog-post-title">¿Por qué los ataques Phishing tienen tanto éxito? Esto dicen los expertos
+                            </h2>
+                        <p class="blog-post-meta">September 28, 2019 by <a href="#">Javier Jiménez</a></p>
+                
+                        <p>Son muchas las amenazas que nos podemos encontrar a la hora de navegar por Internet. Muchos tipos de malware que pueden poner en riesgo nuestra seguridad y privacidad. Sin embargo uno de los ataques más frecuentes y que está más presente en todo tipo de dispositivos es el Phishing. Pese a que los usuarios cada vez más conocen su existencia, lo cierto es que los ataques no cesan. En este artículo vamos a explicar por qué los ataques Phishing tienen tanto éxito. Nos hacemos eco de lo que indican los expertos.</p>
+                        
+                        <p>Este tipo de problemas no ha hecho más que aumentar en los últimos años. Los ataques Phishing o ataques de suplantación de identidad tienen como objetivo robar las credenciales y contraseñas de los usuarios.</p>
+                        <p>Hay que tener en cuenta que están presentes en múltiples servicios y plataformas. Generalmente se distribuyen a través del correo electrónico, pero también podemos recibir este tipo de ataques mediante SMS o por redes sociales. Suele aparecer como un problema, algo que hay que solucionar antes de un determinado tiempo. Buscan que la víctima no tenga margen de decisión y hagan clic en el enlace.</p>
+                      </div><!-- /.blog-post -->
+                
+                      <nav class="blog-pagination">
+                        <button class="btn btn-outline-primary" onclick="alerta()">Más antiguos</button>
+                        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Recientes</a>
+                      </nav>
+                
+                    </div><!-- /.blog-main -->
+                
+                    <aside class="col-md-4 blog-sidebar">
+                      <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="font-italic">Acerca de...</h4>
+                        <p class="mb-0">En esta sección se prente informar a los usuarios de los peligros que conllevan las campañas de Phishing, si desea adentrarse en esta área, proceda a la barra de naveganción superior y cree una nueva campaña.</p>
+                      </div>
+                
+                      <div class="p-25">
+                          <div class="chart1">
+                              <div class="col col-md-19">
+                                <div class="row">
+                                  <div class="col col-md-25">
+                                    <h4>Resultados obtenidos de las campañas:</h4>
+                                        Campañas canceladas<span class="pull-right strong"> 8</span>
+                                         <div class="progress">
+                                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="15"aria-valuemin="0" aria-valuemax="100" style="width:15%">15%</div>
+                                        </div>
+                                      
+                                        Campañas contestadas correctamente<span class="pull-right strong"> 80</span>
+                                         <div class="progress">
+                                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100"aria-valuemin="0" aria-valuemax="100" style="width:80%">80%</div>
+                                        </div>
+                                      
+                                        Campañas pausadas<span class="pull-right strong"> 12</span>
+                                         <div class="progress">
+                                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="8"aria-valuemin="0" aria-valuemax="100" style="width:12%">12%</div>
+                                        </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      
+                      </div>
+                
+                      <div class="p-4">
+                        <h4 class="font-italic">Nuestras redes sociales</h4>
+                        <ol class="list-unstyled">
+                          <li><a href="https://github.com/vicAguilar98/Proyecto2019">GitHub</a></li>
+                          <li><a href="https://www.facebook.com/victor.shunske">Facebook</a></li>
+                        </ol>
+                      </div>
+                    </aside><!-- /.blog-sidebar -->
+                
+                  </div><!-- /.row -->
+                
+                </main><!-- /.container -->
+                
+    <script>
+      function alerta(){
+        alert("No hay más mensajes antiguos.");
+      }
+    </script>   
+    <!-- The Modal -->
+  <div class="modal fade" id="modalINIT">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Bienvenidos Anti-spam</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <p class="text-justify text-capitalize">Esta página tiene como objetivo concientizar a las personas sobre los riegos del Phishing y enseñarlos a realizar una pequeña campaña.</p>
+            <p class="text-center"><strong>Phishing</strong></p><p class="text-justify text-capitalize">conocido como suplantación de identidad, es un término informático que denomina un modelo de abuso informático y que se comete mediante el uso de un tipo de ingeniería social, caracterizado por intentar adquirir información confidencial de forma fraudulenta.</p>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>         
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

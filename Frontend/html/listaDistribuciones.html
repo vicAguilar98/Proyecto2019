@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+             .form-inline {
+               display: inline-block;
+           }
+           #editEmployeeModal{
+             background: transparent;
+           }
+           .navbar-header.col {
+               padding: 0 !important;
+           }	
+           .navbar {		
+               background: #fff;
+               padding-left: 16px;
+               padding-right: 16px;
+               border-bottom: 1px solid #d6d6d6;
+               box-shadow: 0 0 4px rgba(0,0,0,.1);
+           }
+           .nav-link img {
+               border-radius: 50%;
+               width: 36px;
+               height: 36px;
+               margin: -8px 0;
+               float: left;
+               margin-right: 10px;
+           }
+           .navbar .navbar-brand {
+               color: #555;
+               padding-left: 0;
+               padding-right: 50px;
+               font-family: 'Merienda One', sans-serif;
+           }
+           .navbar .navbar-brand i {
+               font-size: 20px;
+               margin-right: 5px;
+           }
+           .search-box {
+               position: relative;
+           }	
+           .search-box input {
+               box-shadow: none;
+               padding-right: 35px;
+               border-radius: 3px !important;
+               float:right;
+           }
+           .search-box .input-group-addon {
+               min-width: 35px;
+               border: none;
+               background: transparent;
+               position: absolute;
+               right: 0;
+               z-index: 9;
+               padding: 7px;
+               height: 100%;
+           }
+           .search-box i {
+               color: #a0a5b1;
+               font-size: 19px;
+           }
+           .navbar .nav-item i {
+               font-size: 18px;
+           }
+           .navbar .dropdown-item i {
+               font-size: 16px;
+               min-width: 22px;
+           }
+           .navbar .nav-item.open > a {
+               background: none !important;
+           }
+           .navbar .dropdown-menu {
+               border-radius: 1px;
+               border-color: #e5e5e5;
+               box-shadow: 0 2px 8px rgba(0,0,0,.05);
+           }
+           .navbar .dropdown-menu li a {
+               color: #777;
+               padding: 8px 20px;
+               line-height: normal;
+           }
+           .navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:active {
+               color: #333;
+           }	
+           .navbar .dropdown-item .material-icons {
+               font-size: 21px;
+               line-height: 16px;
+               vertical-align: middle;
+               margin-top: -2px;
+           }
+           .navbar .badge {
+               background: #f44336;
+               font-size: 11px;
+               border-radius: 20px;
+               position: absolute;
+               min-width: 10px;
+               padding: 4px 6px 0;
+               min-height: 18px;
+               top: 5px;
+           }
+           .navbar ul.nav li a.notifications, .navbar ul.nav li a.messages {
+               position: relative;
+               margin-right: 10px;
+           }
+           .navbar ul.nav li a.messages {
+               margin-right: 20px;
+           }
+           .navbar a.notifications .badge {
+               margin-left: -8px;
+           }
+           .navbar a.messages .badge {
+               margin-left: -4px;
+           }	
+           .navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
+               background: transparent !important;
+           }
+           @media (min-width: 1200px){
+               .form-inline .input-group {
+                   width: 300px;
+                   margin-left: 30px;
+               }
+           }
+           @media (max-width: 1199px){
+               .form-inline {
+                   display: block;
+                   margin-bottom: 10px;
+               }
+               .input-group {
+                   width: 100%;
+               }
+           }
+           .well{
+               width: 50%;
+           }
+       </style>
+       <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+      <!--  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script> -->
+       <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!--        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ -->       <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+       <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Phishing</a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="inicio.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Campañas.html">Campaña</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listaDistribuciones.html">Listas de Distribución</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="templates.html">Templates</a>
+            </li>
+         </ul>
+               
+        </div>
+      </nav>
+
+
+
+
+      <div class="container">          
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header" style="padding:35px 50px;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                  </div>
+                  <div class="modal-body" style="padding:40px 50px;">
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                        <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                        <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Remember me</label>
+                      </div>
+                        <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    <p>Not a member? <a href="#">Sign Up</a></p>
+                    <p>Forgot <a href="#">Password?</a></p>
+                  </div>
+                </div>
+                
+              </div>
+            </div> 
+          </div>
+
+          <!-------------------------------------------------------------------------->
+          <div class="container">
+              <div class="row">
+                  <div class="span12">
+                      <ul class="thumbnails">
+                          <li class="span5 clearfix">
+                            <div class="thumbnail clearfix">
+                              <img src="img/adobe-logo.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                              <div class="caption" class="pull-left" id="adobe">
+                                <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right" data-toggle="modal" data-target="#editEmployeeModal">Mostrar usuarios</a>
+                                <h4>      
+                                <a href="#" >Proyectos Adobe</a>
+                                </h4>
+                                <small><b>TC: </b>993</small>  
+                              </div>
+                            </div>
+                          </li>
+                            <li class="span5 clearfix">
+                            <div class="thumbnail clearfix">
+                              <img src="img/Logo-ITESO-MinimoV.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                              <div class="caption" class="pull-left" id="iteso">
+                                <a href="http://bootsnipp.com/"  class="btn btn-primary icon  pull-right" data-toggle="modal" data-target="#editEmployeeModal">Mostrar usuarios</a>
+                                <h4>      
+                                <a href="#" >Humanidades ITESO</a>
+                                </h4>
+                                <small><b>TC: </b>384</small>  
+                              </div>
+                            </div>
+                          </li>
+                            <li class="span5 clearfix">
+                            <div class="thumbnail clearfix">
+                              <img src="img/git.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                              <div class="caption" class="pull-left" id="git">
+                                <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right" data-toggle="modal" data-target="#editEmployeeModal">Mostrar usuarios</a>
+                                <h4>      
+                                <a href="#" >Usuarios GitHub</a>
+                                </h4>
+                                <small><b>TC: </b>99384877</small>  
+                              </div>
+                            </div>
+                          </li>
+                            <li class="span5 clearfix">
+                            <div class="thumbnail clearfix">
+                              <img src="img/paypal.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                              <div class="caption" class="pull-left" id="paypal">
+                                <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right" data-toggle="modal" data-target="#editEmployeeModal">Mostrar usuarios</a>
+                                <h4>      
+                                <a href="#" >Ventas Paypal</a>
+                                </h4>
+                                <small><b>TC: </b>899</small>     
+                              </div>
+                            </div>
+                          </li>
+                            <li class="span5 clearfix">
+                            <div class="thumbnail clearfix">
+                              <img src="img/Microsoft-Logo-2012.jpg"  width="320px" height="200px" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                              <div class="caption" class="pull-left" id="microsoft">
+                                <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right" data-toggle="modal" data-target="#editEmployeeModal">Mostrar usuarios</a>
+                                <h4>      
+                                <a href="#" >Humanidades de Microsoft</a>
+                                </h4>
+                                <small><b>TC: </b>877</small>
+                              </div>
+                            </div>
+                          </li>
+                            <li class="span5 clearfix">
+                            <div class="thumbnail clearfix">
+                              <img src="img/gob.jpg" width="320px" height="200px" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                              <div class="caption" class="pull-left" id="gob">
+                                <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right" data-toggle="modal" data-target="#editEmployeeModal">Mostrar usuarios</a>
+                                <h4>      
+                                <a href="#" >Listas de correo del gobierno</a>
+                                </h4>
+                                <small><b>TC: </b>200</small>
+                              </div>
+                            </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+
+
+          <!-- Edit Modal HTML -->
+          <div id="editEmployeeModal" class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <form>
+                          <div class="modal-header">						
+                              <h4 class="modal-title">Editar Campaña</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          </div>
+                          <div class="modal-body">					
+                              <div class="form-group">
+                                  <label>Nombre de la Lista</label>
+                                  <input type="text" class="form-control" required>
+                              </div>
+                              <div class="form-group">
+                                  <label>Compañía</label>
+                                  <input type="email" class="form-control" required>
+                              </div>
+                              <div class="form-group">
+                                  <label>Lista de mails</label>
+                                  <textarea class="form-control rounded-0" id="arraymail" rows="3" required></textarea>
+                              </div>
+                              					
+                          </div>
+                          <div class="modal-footer">
+                              <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancel">
+                              <input type="submit" class="btn btn-info" value="Save">
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <!-------------------------------------------------------------------------->
+           
+          <script>
+          $(document).ready(function(){
+            $("#myBtn").click(function(){
+              $("#myModal").modal();
+            });
+          });
+          </script>
+
+          <!-------------------------------------------------------------------------->
+          
+
+</body>
+</html>
